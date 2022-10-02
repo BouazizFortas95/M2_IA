@@ -1,0 +1,8 @@
+package TP1;
+
+/*
+ * 1. le modèle client/serveur : 
+ * Nous considérons un système consistant en un serveur dont le service à fournir est représenté par un message contenant la
+ * température (valeur aléatoire). Le client accède à ce service pour obtenir la température actuelle. 
+ * Vous avez le choix d’utiliser des sockets UDP ou TCP.
+ */

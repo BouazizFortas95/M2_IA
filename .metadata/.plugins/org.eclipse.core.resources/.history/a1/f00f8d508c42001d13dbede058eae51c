@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package tp1;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+/**
+ * @author Bouaziz Fortas
+ *
+ */
+public class Server {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			ServerSocket server = new ServerSocket(1234);
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+
+	}
+
+}
