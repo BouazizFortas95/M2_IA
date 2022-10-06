@@ -24,8 +24,10 @@ public class Client {
 		
 		try {
 			Socket socket = new Socket("localhost", 1234);
+			
 			DataInputStream dis = new DataInputStream(socket.getInputStream());
 			DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+			
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 			String msg_1 = "", msg_2 = "";
 			
