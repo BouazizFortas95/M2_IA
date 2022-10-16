@@ -44,15 +44,17 @@ public class Server {
 					dos.writeUTF(temp);
 					dos.flush();
 				}else {
-					if(!msg.equals("stop")) {
-						dos.writeUTF("Opps!, The service is not available.");
-						dos.flush();
-					}else {
+//					if(!msg.equals("stop")) {
+//						dos.writeUTF("Opps!, This service is not available now!.");
+//						dos.flush();
+//					}else {
 						dos.writeUTF("Opps!, Server is stop running.");
 						dos.flush();
-					}
+//					}
 				}
 			}
+			dos.writeUTF("Opps!, This service is not available now!.");
+			dos.flush();
 
 			dis.close();
 			dos.close();

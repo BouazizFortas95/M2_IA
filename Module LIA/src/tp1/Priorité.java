@@ -9,8 +9,8 @@ package tp1;
  */
 public enum Priorité {
 
-	LEFT_OPER(0),
-	RIGHT_OPER(1),
+	LEFT_BRACKET(0),
+	RIGHT_BRACKET(1),
 	NOT(2),
 	AND(3),
 	OR(4),
