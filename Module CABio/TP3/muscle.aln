@@ -1,0 +1,74 @@
+CLUSTAL multiple sequence alignment by MUSCLE (3.8)
+
+
+sp|Q3ZCQ2|AX2R_HUMAN       ---------MEQHFLGC----------------------------------------VKR
+sp|P08133|ANXA6_HUMAN      MAKPAQGAKYRGSIHDFPGFDPNQDAEALYTAMKGFGSDKEAILDIITSRSNRQRQEVCQ
+sp|P04083|ANXA1_HUMAN      ----------MAMVSEF----------------------------------------LKQ
+sp|P07355|ANXA2_HUMAN      ----------MSTVHEI----------------------------------------LCK
+                                        .                                           : .
+
+sp|Q3ZCQ2|AX2R_HUMAN       AW----------------------------------------------------------
+sp|P08133|ANXA6_HUMAN      SYKSLYGKDLIADLKYELTGKFERLIVGLMRPPAYCDAKEIKDAISGIGTDEKCLIEILA
+sp|P04083|ANXA1_HUMAN      AW----------------------------------------------------------
+sp|P07355|ANXA2_HUMAN      LS----------------------------------------------------------
+                                                                                       
+
+sp|Q3ZCQ2|AX2R_HUMAN       ------------------------------------------------------------
+sp|P08133|ANXA6_HUMAN      SRTNEQMHQLVAAYKDAYERDLEADIIGDTSGHFQKMLVVLLQGTREEDDVVSEDLVQQD
+sp|P04083|ANXA1_HUMAN      ------------------------------------------------------------
+sp|P07355|ANXA2_HUMAN      ------------------------------------------------------------
+                                                                                       
+
+sp|Q3ZCQ2|AX2R_HUMAN       ------------------------------------------------------------
+sp|P08133|ANXA6_HUMAN      VQDLYEAGELKWGTDEAQFIYILGNRSKQHLRLVFDEYLKTTGKPIEASIRGELSGDFEK
+sp|P04083|ANXA1_HUMAN      ------------------------------------------------------------
+sp|P07355|ANXA2_HUMAN      ------------------------------------------------------------
+                                                                                       
+
+sp|Q3ZCQ2|AX2R_HUMAN       ------------------------------------------------------------
+sp|P08133|ANXA6_HUMAN      LMLAVVKCIRSTPEYFAERLFKAMKGLGTRDNTLIRIMVSRSELDMLDIREIFRTKYEKS
+sp|P04083|ANXA1_HUMAN      ----------------------------------------------------FIENEEQE
+sp|P07355|ANXA2_HUMAN      ------------------------------------------------------------
+                                                                                       
+
+sp|Q3ZCQ2|AX2R_HUMAN       --------------------------------DSAE--------------------VAPE
+sp|P08133|ANXA6_HUMAN      LYSMIKNDTSGEYKKTLLKLSGGDDDAAGQFFPEAAQVAYQMWELSAVARVELKGTVRPA
+sp|P04083|ANXA1_HUMAN      YVQTVKSSKGG---------------------PGSA--------------------VSPY
+sp|P07355|ANXA2_HUMAN      ----LEGDHST---------------------PPSA-----------------YGSVKAY
+                                                             :                     * . 
+
+sp|Q3ZCQ2|AX2R_HUMAN       PQPPPIVSSED-------RGPWPLPLYPVLGEYS--------------------------
+sp|P08133|ANXA6_HUMAN      NDFNPDADAKALRKAMKGLGTDEDTIIDIITHRSNVQRQQIRQTFKSHFGRDLMTDLKSE
+sp|P04083|ANXA1_HUMAN      PTFNPSSDVAALHKAIMVKGVDEATIIDILTKRNNAQRQQIKAAYLQETGKPLDETLKKA
+sp|P07355|ANXA2_HUMAN      TNFDAERDALNIETAIKTKGVDEVTIVNILTNRSNAQRQDIAFAYQRRTKKELASALKSA
+                               .  .           *    .:  ::   .                          
+
+sp|Q3ZCQ2|AX2R_HUMAN       ----LDSCDLGLLSSPC--------------------------------WRLPGVYWQNG
+sp|P08133|ANXA6_HUMAN      ISGDLARLILGLMMPPAHYDAKQLKKAMEGAGTDEKALIEILATRTNAEIRAINEAYKED
+sp|P04083|ANXA1_HUMAN      LTGHLEEVVLALLKTPAQFDADELRAAMKGLGTDEDTLIEILASRTNKEIRDINRVYREE
+sp|P07355|ANXA2_HUMAN      LSGHLETVILGLLKTPAQYDASELKASMKGLGTDEDSLIEIICSRTNQELQEINRVYKEM
+                               *    *.*: .*.                                 .  .  :.: 
+
+sp|Q3ZCQ2|AX2R_HUMAN       LSPGVQSTLEPSTA---KPTEFSWPGTQKQQEAPVEEVGQAEEP---------DRLRLQQ
+sp|P08133|ANXA6_HUMAN      YHKSLEDALSSDTSGHFRRILISLATGHREEGGENLDQAREDAQVAAEILEIADTPSGDK
+sp|P04083|ANXA1_HUMAN      LKRDLAKDITSDTSGDFRNALLSLAKGDRSEDFGVNE-DLADSD-ARALYEAGERRKGTD
+sp|P07355|ANXA2_HUMAN      YKTDLEKDIISDTSGDFRKLMVALAKGRRAEDGSVIDYELIDQD-ARDLYDAGVKRKGTD
+                              .: . : ..*:   .   .: .   . :     :    :                 .
+
+sp|Q3ZCQ2|AX2R_HUMAN       LP----WSSPL------------------HPWDRQQ--------DTEVCDSGCLLERRHP
+sp|P08133|ANXA6_HUMAN      TSLETRFMTILCTRSYPHLRRVFQEFIKMTNYDVEHTIKKEMSGDVRDAFVAIVQSVKNK
+sp|P04083|ANXA1_HUMAN      VNV---FNTILTTRSYPQLRRVFQKYTKYSKHDMNKVLDLELKGDIEKCLTAIVKCATSK
+sp|P07355|ANXA2_HUMAN      VPK---WISIMTERSVPHLQKVFDRYKSYSPYDMLESIRKEVKGDLENAFLNLVQCIQNK
+                                 : : :                     *           *   .    :      
+
+sp|Q3ZCQ2|AX2R_HUMAN       PAL---QPWRHLPGFSDCLEWILRVGF-----------AAFSVLW--ACCSRI-------
+sp|P08133|ANXA6_HUMAN      PLFFADKLYKSMKGAGTDEKTLTRIMVSRSEIDLLNIRREFIEKYDKSLHQAIEGDTSGD
+sp|P04083|ANXA1_HUMAN      PAFFAEKLHQAMKGVGTRHKALIRIMVSRSEIDMNDIKAFYQKMYGISLCQAILDETKGD
+sp|P07355|ANXA2_HUMAN      PLYFADRLYDSMKGKGTRDKVLIRIMVSRSEVDMLKIRSEFKRKYGKSLYYYIQQDTKGD
+                           *     .    : * .   : : *: .             :   :  :    *       
+
+sp|Q3ZCQ2|AX2R_HUMAN       --------CGAKQP
+sp|P08133|ANXA6_HUMAN      FLKALLALCGGED-
+sp|P04083|ANXA1_HUMAN      YEKILVALCGGN--
+sp|P07355|ANXA2_HUMAN      YQKALLYLCGGDD-
+                                   **..  

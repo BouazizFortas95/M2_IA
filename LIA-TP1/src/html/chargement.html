@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chargement</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<style type="text/css">
+		body{
+			font-family: "segoe ui", "trebuchet ms", sans-serif;
+			font-size: 16;
+		}
+		@keyframes a{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+		.mk-spinner-ring{
+			height:50px;
+			width: 50px;
+			/*margin-top:-25px;*/
+			border-radius:50%;
+			border:3px solid #00bcd4;
+			border-left-color:transparent;
+			background:transparent;
+			content:"";
+			display:inline-block;
+			/*position:absolute;
+			top:50%;
+			left:50%;
+			*/
+			z-index:1;
+			animation:a 1s infinite linear;
+		}
+		.mk-spinner-ring {
+			border-color: #6557D2;
+			border-left-color: transparent;
+		}
+		.contents{
+			position: absolute;
+			top:50%;
+			left:50%;
+			align-content: center;
+			margin-top:-40px;
+			margin-left:-75px;
+		}
+	</style>
+	<div class="contents">
+		<center><div class="mk-spinner-ring"></div>
+		<div>Résolution en cours...</div></center>
+	</div>
+</body>
+</html>

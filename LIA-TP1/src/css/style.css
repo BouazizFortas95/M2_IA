@@ -1,0 +1,92 @@
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: blue;
+}
+
+.buttonDflt {
+    -fx-background-color: #26C6DA;
+    -fx-border-color: blue;
+}
+
+.button:hover {
+    -fx-border-color: #F012BB;
+    -fx-border-width: 2px;
+}
+
+.button:pressed {
+    -fx-border-width: 1px;
+}
+
+.fond-blanc {
+    -fx-background-color: white;
+}
+
+.ombre {
+
+}
+
+.text-field {
+    -fx-border-color: grey;
+    /*-fx-border-width: 0 0 1 0; /* top, right, bottom, left*/
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.htry {
+    -fx-border-color: transparent gray transparent transparent;
+    -fx-border-width: 2px;
+}
+
+.list-view .list-cell {
+    -fx-cell-size: 40px;
+    -fx-font-size: 20px;
+    -fx-text-fill: gray;
+    -fx-background-color: white;
+}
+
+.list-view .list-cell:hover, .list-cell:pressed {
+    -fx-text-fill: black;
+    /*-fx-border-color: transparent transparent #F012BB transparent;*/
+    -fx-font-weight: bold;
+    -fx-background-color: #DDD;
+}
+
+.list-view .list-cell:pressed {
+    -fx-font-weight: normal;
+}
+
+.to:hover {
+    -fx-image: url("../images/arrow-right-aqua.png");
+}
+
+.to {
+    -fx-image: url("../images/arrow-right-gray.png");
+}
+
+.to:pressed {
+    -fx-image: url("../images/arrow-right-black.png");
+}
+
+.boite-field :hover {
+    -fx-effect: dropshadow(gaussian, gray, 3, 0.1, 0, 0);
+}
+
+.status-bar {
+    -fx-border-color: gray transparent transparent transparent;
+}
+
+#menu {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+#menu-slide .button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-alignment: center-left;
+}
+
+#menu-slide .button:hover {
+    -fx-background-color: lightgray;
+}

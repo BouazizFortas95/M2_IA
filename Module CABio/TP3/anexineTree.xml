@@ -1,0 +1,28 @@
+<phyloxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phyloxml.org" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+  <phylogeny rooted="true">
+    <clade>
+      <name>Inner2</name>
+      <branch_length>0</branch_length>
+      <clade>
+        <name>Inner1</name>
+        <branch_length>0.011498516320474717</branch_length>
+        <clade>
+          <name>sp|Q3ZCQ2|AX2R_HUMAN</name>
+          <branch_length>0.32752225519287825</branch_length>
+        </clade>
+        <clade>
+          <name>sp|P08133|ANXA6_HUMAN</name>
+          <branch_length>0.6324183976261128</branch_length>
+        </clade>
+      </clade>
+      <clade>
+        <name>sp|P04083|ANXA1_HUMAN</name>
+        <branch_length>0.12722551928783388</branch_length>
+      </clade>
+      <clade>
+        <name>sp|P07355|ANXA2_HUMAN</name>
+        <branch_length>0.1279673590504451</branch_length>
+      </clade>
+    </clade>
+  </phylogeny>
+</phyloxml>

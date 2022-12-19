@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.HostCController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <Label prefHeight="50.0" prefWidth="110.0" text="Host-C">
+         <font>
+            <Font name="Impact" size="40.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="510.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="CLIENT">
+            <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox fx:id="hb_client_logs" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="Host">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_client_host" prefHeight="31.0" prefWidth="200.0" promptText="Enter Server Host">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Port">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="sp_client_port" editable="true" prefHeight="30.0" prefWidth="100.0" />
+                              <Button fx:id="btn_client_connect" onAction="#connectClient" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" text="Connect">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox fx:id="hb_client_services" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="100.0" text="Service Name">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cb_client_services" prefHeight="30.0" prefWidth="300.0" promptText="Select Service" />
+                              <Button fx:id="btn_client_gs" onAction="#getServiceByName" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" text="Get Service">
+                                 <font>
+                                    <Font name="Bell MT" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="30.0" prefWidth="560.0" text="Client Logs">
+                           <font>
+                              <Font name="Bell MT" size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="lv_client_logs" prefHeight="240.0" prefWidth="580.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

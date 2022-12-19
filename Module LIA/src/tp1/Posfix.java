@@ -96,77 +96,96 @@ public class Posfix {
 	public BinaryTree infixToPostfixWithBT(BinaryTree binaryTree) {
 		Priorité priorité;
 		char symbol;
-		System.out.println("\t______________________________");
+
 		for (int i = 0; i < infix.length(); i++) {
 
 			symbol = infix.charAt(i);
 			priorité = getPriorité(symbol);
 			if (symbol == '>') {
-				i++;
+				continue;
 			} else {
-				if (priorité == Priorité.OPEREND) {
-					binaryTree.addNode2BT(new NodeBT(symbol, priorité, null, null), binaryTree.getRoot());
-				} else if (priorité == Priorité.RIGHT_BRACKET) {
-					while (stack.lastElement() != Priorité.LEFT_BRACKET) {
-						priorité = stack.pop();
-						binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()],
-								getPriorité(operans[priorité.getIndex()]), null, null), binaryTree.getRoot());
+				try {
+					if (priorité == Priorité.OPEREND) {
+						binaryTree.addNode2BT(new NodeBT(symbol, priorité, null, null), binaryTree.getRoot());
+					} else if (priorité == Priorité.RIGHT_BRACKET) {
+						while ((!stack.isEmpty()) && (!stack.lastElement().equals(Priorité.LEFT_BRACKET))) {
+							priorité = stack.pop();
+							binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()],
+									getPriorité(operans[priorité.getIndex()]), null, null), binaryTree.getRoot());
+						}
+						stack.pop();
+					} else {
+						while ((!stack.isEmpty()) && (stack.lastElement().getIndex() > Priorité.OPEREND.getIndex())) {
+							priorité = stack.pop();
+							binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()],
+									getPriorité(operans[priorité.getIndex()]), null, null), binaryTree.getRoot());
+						}
+						stack.push(getPriorité(symbol));
 					}
-					stack.pop();
-				} else {
-					while ((!stack.isEmpty()) && (stack.lastElement().getIndex() > Priorité.OPEREND.getIndex())) {
-						priorité = stack.pop();
-						binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()],
-								getPriorité(operans[priorité.getIndex()]), null, null), binaryTree.getRoot());
-					}
-					stack.push(getPriorité(symbol));
+				} catch (Exception e) {
+					//System.err.println(e.getMessage());
 				}
 			}
 
-			while (!stack.isEmpty()) {
-				priorité = stack.pop();
-				if (!priorité.equals(Priorité.LEFT_BRACKET))
-					binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()], priorité, null, null),
-							binaryTree.getRoot());
+			while ((!stack.isEmpty()) && (!stack.isEmpty())) {
+				try {
+					priorité = stack.pop();
+					if (!priorité.equals(Priorité.LEFT_BRACKET))
+						binaryTree.addNode2BT(new NodeBT(operans[priorité.getIndex()], priorité, null, null),
+								binaryTree.getRoot());
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
 			}
 		}
 		return binaryTree;
 	}
 
 	// Find Euler Tour
-	public Vector<NodeBT> eulerTree(NodeBT root, Vector<NodeBT> Euler) {
+	public Vector<NodeBT> eulerTree(NodeBT root, Vector<NodeBT> euler) {
 		// store current node's data
-		Euler.add(root);
+		euler.add(root);
 
 		// If left node exists
 		if (root.getLeft() != null) {
 			// traverse left subtree
-			Euler = eulerTree(root.getLeft(), Euler);
+			euler = eulerTree(root.getLeft(), euler);
 
 			// store parent node's data
-			Euler.add(root);
+			euler.add(root);
 		}
 
 		// If right node exists
 		if (root.getRight() != null) {
 			// traverse right subtree
-			Euler = eulerTree(root.getRight(), Euler);
+			euler = eulerTree(root.getRight(), euler);
 
 			// store parent node's data
-			Euler.add(root);
+			euler.add(root);
 		}
-		return Euler;
+		return euler;
 	}
 
 	// Function to print Euler Tour of tree
 	public void printEulerTour(NodeBT root) {
 		// Stores Euler Tour
-		Vector<NodeBT> Euler = new Vector<NodeBT>();
+		Vector<NodeBT> euler = new Vector<NodeBT>();
 
-		Euler = eulerTree(root, Euler);
+		euler = eulerTree(root, euler);
 
-		for (int i = 0; i < Euler.size(); i++)
-			System.out.print(Euler.get(i) + " ");
+		for (int i = 0; i < euler.size(); i++)
+			System.out.print(euler.get(i).getSymbol()+" ");
 	}
 
+	
+	public void preorder(NodeBT root) {
+        if (root == null) {
+            return;
+        }
+
+        System.out.print(root.getSymbol()+" ");
+        preorder(root.getLeft());
+        preorder(root.getRight());
+
+    }
 }
