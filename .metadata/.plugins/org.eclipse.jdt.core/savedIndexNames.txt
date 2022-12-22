@@ -1,10 +1,3 @@
 INDEX VERSION 1.131+C:\Users\Bouaziz Fortas\M2_IA\.metadata\.plugins\org.eclipse.jdt.core
-250989427.index
-644275390.index
-1930546513.index
-2467876480.index
 3413725848.index
-3060667215.index
-2825858835.index
-4105094450.index
-2818293790.index
+3430548587.index

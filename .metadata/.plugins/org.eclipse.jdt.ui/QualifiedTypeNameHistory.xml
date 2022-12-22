@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
-    <fullyQualifiedTypeName name="javafx.scene.effect.BoxBlur"/>
     <fullyQualifiedTypeName name="com.jfoenix.controls.JFXTextField"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
-    <fullyQualifiedTypeName name="tp1.Priorité"/>
     <fullyQualifiedTypeName name="javafx.geometry.Insets"/>
     <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
     <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="application.HandelPS"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="application.Weather"/>
+    <fullyQualifiedTypeName name="org.sat4j.reader.EfficientScanner"/>
+    <fullyQualifiedTypeName name="java.lang.UnsatisfiedLinkError"/>
+    <fullyQualifiedTypeName name="tp1.Priorité"/>
 </qualifiedTypeNameHistroy>

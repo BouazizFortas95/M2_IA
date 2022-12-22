@@ -16,7 +16,9 @@ public enum Priorité {
 	OR(4),
 	IPML(5),
 	EQUALS(6),
-	OPEREND(7);
+	OPEREND(7),
+	START(8),
+	END(9);
 
 	private int index;
 	

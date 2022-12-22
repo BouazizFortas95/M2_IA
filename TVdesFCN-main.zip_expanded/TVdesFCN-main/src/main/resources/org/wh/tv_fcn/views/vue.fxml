@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.WebView?>
+<BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="org.wh.tv_fcn.controllers.Controller">
+   <top>
+      <VBox styleClass="fond-blanc" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu fx:id="fileMenu" mnemonicParsing="false" text="Fichier">
+                  <items>
+                        <MenuItem fx:id="exportAct" onAction="#onSaveHtml" text="Exporter Vers HTML">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/export20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="printAct" mnemonicParsing="false" onAction="#onPrint" text="Imprimer">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/save20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="closeAct" mnemonicParsing="false" onAction="#onClose" text="Fermer">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/exit20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu fx:id="editMenu" mnemonicParsing="false" text="Edition">
+                  <items>
+                    <MenuItem fx:id="historyAct" mnemonicParsing="false" onAction="#afficherHistorique" text="Historique">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/clock20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <Menu fx:id="affModeAct" mnemonicParsing="false" text="Mode Affichage">
+                           <items>
+                              <RadioMenuItem fx:id="vf" mnemonicParsing="false" onAction="#onAffVF" selected="true" text="V/F" />
+                              <RadioMenuItem fx:id="zu" mnemonicParsing="false" onAction="#onAff01" text="1/0" />
+                           </items>
+                        </Menu>
+                  </items>
+                </Menu>
+                  <Menu fx:id="displayMenu" mnemonicParsing="false" text="Affichage">
+                    <items>
+                      <MenuItem fx:id="fullscreenAct" mnemonicParsing="false" onAction="#onFullscreenAct" text="Plein Ecran">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F11" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/fullscreen.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <Menu fx:id="zoomAct" mnemonicParsing="false" text="Zoom 100%">
+                          <items>
+                            <MenuItem fx:id="zoomNormAct" mnemonicParsing="false" onAction="#zoomNormal" text="Normal">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="EQUALS" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../images/zoom-no20.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="zoomPlusAct" mnemonicParsing="false" onAction="#zoomPlus" text="Agrandir +10%">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="UP" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../images/zoom-plus20.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="zoomMoinsAct" mnemonicParsing="false" onAction="#zoomMoins" text="Réduire -10%">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DOWN" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                                 <graphic>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="@../images/zoom-minus20.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/zoom-no20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                        <Menu fx:id="langMenu" mnemonicParsing="false" text="Langue">
+                          <items>
+                              <RadioMenuItem fx:id="dfltLangAct" mnemonicParsing="false" onAction="#onDfltLangAct" selected="true" text="Par Défaut" />
+                              <RadioMenuItem fx:id="englishAct" mnemonicParsing="false" onAction="#onEnglishLangAct" text="Anglais" />
+                              <RadioMenuItem fx:id="frenchAct" mnemonicParsing="false" onAction="#onFrenchLangAct" text="Français" />
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="Aide">
+                  <items>
+                        <MenuItem fx:id="helpAct" mnemonicParsing="false" onAction="#onHelpAct" text="Aide">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/question20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    <MenuItem fx:id="aboutAct" mnemonicParsing="false" onAction="#onAbout" text="A Propos">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../images/info20.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="fond-blanc">
+               <children>
+                  <JFXHamburger onMouseClicked="#onMenuClick" style="-fx-width: 40;" />
+                  <TextFlow>
+                     <children>
+                        <Text fill="GREEN" strokeType="OUTSIDE" strokeWidth="0.0" text="TV">
+                           <font>
+                              <Font name="Segoe UI" size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="ORANGE" strokeType="OUTSIDE" strokeWidth="0.0" text="des">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="FCNالامل">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+                  <TextField editable="false" opacity="0.0" prefHeight="0.0" prefWidth="0.0" />
+                  <HBox fx:id="bteField" alignment="CENTER" onMouseEntered="#onBteFieldEntered" onMouseExited="#onBteFieldExited" styleClass="fond-blanc" HBox.hgrow="SOMETIMES">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextField fx:id="entree" accessibleRole="PARENT" onAction="#valiClick" promptText="Entrez l'expression logique" HBox.hgrow="SOMETIMES">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <ImageView onMouseClicked="#valiClick" pickOnBounds="true" preserveRatio="true" styleClass="to">
+                           <image>
+                              <Image url="@../images/arrow-right-gray.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#7983cd" height="10.0" offsetY="2.0" radius="7.25" />
+               </effect>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <WebView fx:id="vue" onMouseClicked="#onVueClk" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" styleClass="status-bar" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressIndicator fx:id="progressInd" prefHeight="16.0" prefWidth="16.0" visible="false">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </ProgressIndicator>
+            <Label fx:id="status" text="Entrez l'expression logique.">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

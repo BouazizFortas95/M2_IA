@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="685.0" stylesheets="@../css/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="org.wh.tv_fcn.controllers.ControllerAbout">
+   <children>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo%20wh.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label fx:id="aboutTxt" text="A Propos">
+                           <font>
+                              <Font name="French Script MT" size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="aboutArea" editable="false" prefHeight="246.0" prefWidth="435.0" text="TV des FCN 1.3.2&#10;Copyright (c) Wilbitys House Septembre 2018&#10;&#10;Ce programme est un logiciel gratuit; vous pouvez le resdistribuer ou le modifier selon les termes de la GNU Public Licence 2 telle que publiés par la Free Software Foundation.&#10;&#10;Ce programme est distribué dans l'espoir qu'il sera utile, cependant Wilbitys House ne fournit AUCUNE GARANTIE en ce qui concerne l'utilisation que vous en ferez. Pour plus d'informations veuiller consulter la GNU Public License.&#10;&#10;Ce programme est distribué avec une copie de la GNU Public License, dans le cas contraire veuillez contacter la Free Software Foundation, Inc. , 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA." wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER">
+               <children>
+                  <JFXButton onAction="#onOKAbt" prefHeight="30.0" prefWidth="75.0" text="OK" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+   </padding>
+</StackPane>

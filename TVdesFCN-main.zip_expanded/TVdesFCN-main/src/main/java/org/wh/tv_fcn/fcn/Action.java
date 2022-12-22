@@ -1,0 +1,12 @@
+package org.wh.tv_fcn.fcn;
+
+public enum Action {
+  PROPOSITION,
+  LEFT_PARENTHESIS,
+  RIGHT_PARENTHESIS,
+  NEGATIVE_OP,
+  CONJUNCTION_OP,
+  DISJUNCTION_OP,
+  START,
+  END
+}
