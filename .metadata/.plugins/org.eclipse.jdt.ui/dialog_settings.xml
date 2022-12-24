@@ -37,7 +37,7 @@
 		<item key="GenerateJavadoc" value="true"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElements" value="true"/>
 		<item key="updateSimilarElementsMatchStrategy" value="1"/>
 		<item key="updateTextualMatches" value="true"/>
 		<item key="updateQualifiedNames" value="false"/>
